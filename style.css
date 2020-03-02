@@ -1,0 +1,83 @@
+body {
+  height: 100%;
+  background-color: pink;
+}
+
+/* overall game panel */
+#gamePanel {
+  height: 500px;
+  width: 550px;
+  background-color: steelblue;
+  margin: 25% auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px slategrey;
+  position: relative;
+}
+
+/* alert that will provide player with right or wrong information */
+#feedback {
+  max-width: fit-content;
+  background: red;
+  border-radius: 10px;
+  margin: 20px auto;
+  padding: 5px;
+  display: hidden;
+}
+
+/* box that will record the players score */
+#score {
+  background: yellow;
+  padding: 11px;
+  position: absolute;
+  left: 500px;
+  top: 35px;
+  border-radius: 10px;
+
+}
+
+/* section that will display the problem */
+#display {
+  width:80%;
+  height: 40%;
+  background-color: turquoise;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+/* formatting the choice buttons */
+#answers {
+  margin-left: 65px;
+}
+.choices {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  padding: auto;
+}
+
+/* formatting for reset button */
+#reset {
+  padding-top: 5px;
+  border-radius: 10px;
+  margin: 10px 225px;
+}
+
+/* formatting the time remaining */
+#timeRemaining {
+  background: limegreen;
+  padding: 10px;
+  border-radius: 10px;
+  position: absolute;
+  left: 400px;
+}
+
+/* overall styling for buttons:hover */
+button {
+  transition: ease-in-out 0.2s;
+}
+
+button:hover {
+  background-color: mediumaquamarine;
+  border: 2px solid aquamarine;
+}
