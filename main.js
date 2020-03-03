@@ -1,20 +1,22 @@
 var score = 0;
-var time = 60;
+var time = 0;
+var timeLeft = 60;
 var playing = false;
 
 function gameOver() {
-
+  //set playing to false
+  playing = false;
+  //flash 
 }
 
 function startCountdown () {
   intervalId = setInterval(() => {
-    timeRemaining -= 1;
+    time++;
 
-    document.getElementById("time").innerHTML = timeRemaining;
+    document.getElementById("time").innerHTML = timeLeft - time;
 
-    if (timeRemaining) {
-      stopCountdown();
-
+    if (timeLeft == 0) {
+      gameOver();
     }
   }, 1000);
 }
@@ -25,11 +27,11 @@ function startGame() {
   //set the score to 0
   document.getElementById("scoreValue").innerHTML = score;
   //set the countdown to 60
-  document.getElementById("time").innerHTML = time;
-    //reduce time by 1s in loops
-    //timeleft?
-        //yes --> continue
-        //no --> gameOver
+  //reduce time by 1s in loops
+  //timeleft?
+    //yes --> continue
+    //no --> gameOver
+  startCountdown();
   //change button to reset
   document.getElementById("startReset").innerHTML = "Reset Game";
   //generate new q&a
