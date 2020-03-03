@@ -43,6 +43,7 @@ body {
   background-color: turquoise;
   margin: 20px auto;
   border-radius: 10px;
+  transition: ease-in-out 0.2s;
 }
 
 /* formatting the choice buttons */
@@ -57,7 +58,7 @@ body {
 }
 
 /* formatting for reset button */
-#reset {
+#startReset {
   padding-top: 5px;
   border-radius: 10px;
   margin: 10px 225px;
