@@ -1,24 +1,29 @@
 var score = 0;
-var time = 0;
-var timeLeft = 60;
+var time = 4;
 var playing = false;
 
 function gameOver() {
-  //set playing to false
-  playing = false;
-  //flash 
+  //leave timeLeft at 0
+  document.getElementById("time").innerHTML = 0;
+  //flash gamePanel red & display score info
+  document.getElementById("display").style.backgroundColor = "limegreen";
+  document.getElementById("display").style.border = "10px solid red";
+  document.getElementById("display").innerHTML = "<h2>Your score is: " + score + "</h2>"
 }
 
 function startCountdown () {
   intervalId = setInterval(() => {
-    time++;
-
-    document.getElementById("time").innerHTML = timeLeft - time;
-
-    if (timeLeft == 0) {
+    time--;
+    document.getElementById("time").innerHTML = time;
+    if (time == 0) {
+      clearInterval(intervalId);
       gameOver();
     }
   }, 1000);
+}
+
+function generateQA() {
+  
 }
 
 function startGame() {
@@ -35,6 +40,7 @@ function startGame() {
   //change button to reset
   document.getElementById("startReset").innerHTML = "Reset Game";
   //generate new q&a
+  generateQA();
 }
 
 document.getElementById("startReset").onclick = function() {

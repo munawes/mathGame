@@ -15,25 +15,13 @@ body {
   position: relative;
 }
 
-/* alert that will provide player with right or wrong information */
-#feedback {
-  max-width: fit-content;
-  background: red;
-  border-radius: 10px;
-  margin: 20px auto;
-  padding: 5px;
-  display: hidden;
-}
-
 /* box that will record the players score */
 #score {
   background: yellow;
   padding: 11px;
-  position: absolute;
-  left: 500px;
-  top: 35px;
   border-radius: 10px;
-
+  margin: 20px auto;
+  max-width: fit-content;
 }
 
 /* section that will display the problem */
@@ -44,6 +32,11 @@ body {
   margin: 20px auto;
   border-radius: 10px;
   transition: ease-in-out 0.2s;
+  text-align: center;
+}
+
+#display h2 {
+  padding-top: 15%;
 }
 
 /* formatting the choice buttons */
