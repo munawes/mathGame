@@ -71,10 +71,6 @@ function keepScore() {
   }
 }
 
-function checkAnswer() {
-  
-}
-
 function startGame() {
   //set playing to true
   playing = true;
